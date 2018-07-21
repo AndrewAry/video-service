@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.mwtutu.utils.MyMapper"/>
+        </plugin>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/mwtutu"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <!-- 生成模型的包名和位置-->
+        <javaModelGenerator targetPackage="com.mwtutu.domain" targetProject="src/main/java"/>
+
+        <!-- 生成映射文件的包名和位置-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
+
+        <!-- 生成DAO的包名和位置-->
+        <javaClientGenerator targetPackage="com.mwtutu.mapper" targetProject="src/main/java"
+        type="XMLMAPPER"/>
+
+        <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
+        <table tableName="users" domainObjectName="UsersEvent"></table>
+    </context>
+		 
+</generatorConfiguration>

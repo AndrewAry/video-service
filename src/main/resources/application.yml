@@ -1,0 +1,23 @@
+server:
+  port: 8088
+
+spring:
+    datasource:
+        url: jdbc:mysql://127.0.0.1:3306/mwtutu
+        username: root
+        password: root
+
+# mybatis 配置
+mybatis:
+    mapper-locations: classpath:mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+    type-aliases-package: com.mwtutu.domain  # 注意：对应实体类的路径
+    mappers: com.mwtutu.utils.MyMapper
+    not-empty: false
+    identity: MYSQL
+
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql

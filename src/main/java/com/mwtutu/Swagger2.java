@@ -52,11 +52,11 @@ public class Swagger2 {
 	private ApiInfo apiInfo() {
 		return new ApiInfoBuilder()
 				// 设置页面标题
-				.title("使用swagger2构建短视频后端api接口文档")
+				.title("Spring Boot中使用Swagger2构建RESTful APIs")
 				// 设置联系人
-				.contact(new Contact("莫忘兔兔", "http://xyjava.top", "18361212610@163.com"))
+				.contact(new Contact("莫忘兔兔", "https://github.com/mwtutu", ""))
 				// 描述
-				.description("欢迎访问短视频接口文档，这里是描述信息")
+				//.description("欢迎访问短视频接口文档，这里是描述信息")
 				// 定义版本号
 				.version("1.0").build();
 	}

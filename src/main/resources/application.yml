@@ -4,10 +4,10 @@ server:
 spring:
     datasource:
         type: com.alibaba.druid.pool.DruidDataSource
-        url: jdbc:mysql://127.0.0.1:3306/mwtutu
+        url: jdbc:mysql://111.231.74.19:3306/mwtutu
         driver-class-name: com.mysql.jdbc.Driver
-        username: root
-        password: root
+        username: xuyong
+        password: liuyao
 
 # mybatis 配置
 mybatis:
